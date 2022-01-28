@@ -40,4 +40,10 @@ describe("The FizzBuzz function", function(){
     expect(fizzBuzz(90)).toBe('FizzBuzz');
   })
 
+  test('Just return the number', function() {
+    expect(fizzBuzz(1)).toBe(1);
+    expect(fizzBuzz(77)).toBe(77);
+    expect(fizzBuzz(44)).toBe(44);
+  })
+
 })
