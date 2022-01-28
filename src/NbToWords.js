@@ -28,13 +28,11 @@ export function NbToWords(number) {
 
             if (i.length === 3 && i[j] !== '0'){
                 if (j === 0) i[j] === '1' ? words += numbersValues[3][0] : words += (numbersValues[1][i[j]]) + ' ' + (numbersValues[3][0]);
-                if (j === 1 && i[j+1] !== '0') i[j] === '1' ? words += ' ' + numbersValues[0][i[j+1]] : words += ' ' + (numbersValues[2][i[j]]);
-                if (j === 1 && i[j+1] === '0') words += (numbersValues[2][1]);
+                if (j === 1) i[j] === '1' ? words += ' ' + numbersValues[0][i[j+1]] : words += ' ' + (numbersValues[2][i[j]]);
                 if (j === 2) i[j-1] !== '1' ? words += ' ' + numbersValues[1][i[j]] : '';
             }
             else if (i.length === 2 && i[j] !== '0') {
                 if (j === 0) i[j] === '1' ? words += numbersValues[0][i[j+1]] : words += (numbersValues[2][i[j]]);
-                if (j === 0 && i[j+1] === '0') words += (numbersValues[2][1]);
                 if (j === 1) i[j-1] !== '1' ? words += ' ' + numbersValues[1][i[j]] : '';
             }
             else if (i.length === 1 && i[j] !== '0') i[j-1] !== '1' ? words += numbersValues[1][i[j]] : '';
